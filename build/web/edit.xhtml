@@ -1,0 +1,39 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:a4j="http://richfaces.org/a4j"
+      xmlns:rich="http://richfaces.org/rich" 
+    >
+    <h:head>
+        <title>Actualizar cliente</title>
+    </h:head>
+    <h:body>
+        <f:view>
+         <rich:panel header="Actualizacion de clientes" style="width: 400px">
+        <h:outputLabel>Actualizar datos</h:outputLabel>
+        <h:form>
+            <h:outputLabel for="id">Id : </h:outputLabel>
+            <h:inputText id="id-id" value="#{editCustomer.id}"></h:inputText>
+            <br/>
+            <h:outputLabel for="name">Nombre : </h:outputLabel>
+            <h:inputText id="name-id" value="#{editCustomer.name}"></h:inputText>
+            <br/>
+            <h:outputLabel for="lastname">Apellido : </h:outputLabel>
+            <h:inputText id="lastname-id" value="#{editCustomer.lastname}"></h:inputText>
+            <br/>
+            <h:outputLabel for="direccion">Direccion : </h:outputLabel>
+            <h:inputText id="direccion-id" value="#{editCustomer.direccion}"></h:inputText>
+            <br/>
+            <h:outputLabel for="email">Email : </h:outputLabel>
+            <h:inputText id="email-id" value="#{editCustomer.email}"></h:inputText>
+            <br/>
+            <h:commandButton action="#{customer.update(editCustomer)}" value="Guardar Cambios"></h:commandButton>
+        </h:form>
+        </rich:panel>
+        </f:view>
+    </h:body>
+</html>
+
